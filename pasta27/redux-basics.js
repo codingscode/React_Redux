@@ -26,11 +26,15 @@ const reducerRaiz = (state = stateInicial, action) => {
 const armazenar = criarStore(reducerRaiz)
 console.log(armazenar.getState()) // undefined antes, { contador: 0 } depois
 
+// Subscription
+armazenar.subscribe(() => {
+    console.log('[Subscription]', armazenar.getState())   // [Subscription] { contador: 1 }   [Subscription] { contador: 11 }
+})
+
 // Dispatching Action
 armazenar.dispatch({type: 'INC_CONTADOR'})
 armazenar.dispatch({type: 'ADIC_CONTADOR', valor: 10})
 console.log(armazenar.getState())  // saida: { contador: 11 } 
 
-// Subscription
 
 
