@@ -1,5 +1,5 @@
 
-
+digitar no terminal npm i --save redux ou npm i redux
 
 
 
