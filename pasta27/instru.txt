@@ -3,7 +3,7 @@ digitar no terminal npm i --save redux ou npm i redux
 
 executar o arquivo redux-basics.js ; idem ; idem
 
-
+digitar no terminal : npm i react-redux
 
 
 
