@@ -7,5 +7,5 @@ digitar no terminal : npm i react-redux
 
 os botões não setam
 
-
+somente o botão 'incrementar' funciona
 

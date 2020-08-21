@@ -31,7 +31,7 @@ class Contador extends Component {
         return (
             <div>
                 <SaidaContador valor={this.props.cont} />
-                <ControleContador rotulo="Incremento" clicado={() => this.tratarMudancaContador( 'inc' )} />
+                <ControleContador rotulo="Incremento" clicado={this.props.emIncrementoContador} />
                 <ControleContador rotulo="Decremento" clicado={() => this.tratarMudancaContador( 'dec' )}  />
                 <ControleContador rotulo="Adicionar 5" clicado={() => this.tratarMudancaContador( 'adic', 5 )}  />
                 <ControleContador rotulo="Subtrair 5" clicado={() => this.tratarMudancaContador( 'subt', 5 )}  />
@@ -46,4 +46,10 @@ const mapStateParaProps = state => {
     }
 }
 
-export default connect(mapStateParaProps)(Contador)
+const mapDispatchParaProps = dispatch_param => {
+    return {
+       emIncrementoContador: () => dispatch_param({type: 'INCREMENTO'}) 
+    }
+}
+
+export default connect(mapStateParaProps, mapDispatchParaProps)(Contador)

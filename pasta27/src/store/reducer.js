@@ -3,6 +3,11 @@ const stateInicial = {
 }
  
 const reducer = (state = stateInicial, acao) => {
+    if (acao.type === 'INCREMENTO') {
+        return {
+           contador: state.contador + 1
+        }
+    }
     return state
 }
  
