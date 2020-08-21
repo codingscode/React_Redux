@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import ControleContador from '../../components/ControleContador/ControleContador'
 import SaidaContador from '../../components/SaidaControle/SaidaControle'
@@ -29,7 +30,7 @@ class Contador extends Component {
     render () {
         return (
             <div>
-                <SaidaContador valor={this.state.contador} />
+                <SaidaContador valor={this.props.cont} />
                 <ControleContador rotulo="Incremento" clicado={() => this.tratarMudancaContador( 'inc' )} />
                 <ControleContador rotulo="Decremento" clicado={() => this.tratarMudancaContador( 'dec' )}  />
                 <ControleContador rotulo="Adicionar 5" clicado={() => this.tratarMudancaContador( 'adic', 5 )}  />
@@ -39,4 +40,10 @@ class Contador extends Component {
     }
 }
 
-export default Contador
+const mapStateParaProps = state => {
+    return {
+       cont: state.contador
+    }
+}
+
+export default connect(mapStateParaProps)(Contador)

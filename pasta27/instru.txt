@@ -5,7 +5,7 @@ executar o arquivo redux-basics.js ; idem ; idem
 
 digitar no terminal : npm i react-redux
 
-
+os botões não setam
 
 
 
