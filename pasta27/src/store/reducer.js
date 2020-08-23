@@ -3,28 +3,23 @@ const stateInicial = {
 }
  
 const reducer = (state = stateInicial, acao) => {
-    if (acao.type === 'INCREMENTO') {
-        return {
-           contador: state.contador + 1
-        }
-    }
-
-    if (acao.type === 'DECREMENTO') {
-        return {
-           contador: state.contador - 1
-        }
-    }
-
-    if (acao.type === 'ADIC') {
-        return {
-           contador: state.contador + acao.valor
-        }
-    }
-
-    if (acao.type === 'SUBTR') {
-        return {
-           contador: state.contador - acao.valor
-        }
+    switch(acao.type) {
+        case 'INCREMENTO':
+            return {
+                contador: state.contador + 1
+            }
+        case 'DECREMENTO':
+            return {
+                contador: state.contador - 1
+            }
+        case 'ADIC':
+            return {
+                contador: state.contador + acao.valor
+            }
+        case 'SUBTR':
+            return {
+                contador: state.contador - acao.valor
+            }
     }
     
     return state

@@ -32,7 +32,7 @@ class Contador extends Component {
             <div>
                 <SaidaContador valor={this.props.cont} />
                 <ControleContador rotulo="Incremento" clicado={this.props.emIncrementoContador} />
-                <ControleContador rotulo="Decremento" clicado={() => this.tratarMudancaContador( 'dec' )}  />
+                <ControleContador rotulo="Decremento" clicado={this.props.emDecrementoContador}  />
                 <ControleContador rotulo="Adicionar 10" clicado={this.props.emAdicionarContador}  />
                 <ControleContador rotulo="Subtrair 15" clicado={this.props.emSubstrairContador}  />
             </div>
