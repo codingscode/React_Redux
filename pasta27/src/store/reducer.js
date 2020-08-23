@@ -1,5 +1,6 @@
 const stateInicial = {
-    contador: 0
+    contador: 0,
+    resultados: []
 }
  
 const reducer = (state = stateInicial, acao) => {

@@ -10,6 +10,7 @@ os botões não setam
 somente o botão 'incrementar' funciona
 botao adicionar e subtrair funcionam
 
+o botao n faz nada ainda
 
 
 

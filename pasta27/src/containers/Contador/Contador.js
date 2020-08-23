@@ -35,6 +35,11 @@ class Contador extends Component {
                 <ControleContador rotulo="Decremento" clicado={this.props.emDecrementoContador}  />
                 <ControleContador rotulo="Adicionar 10" clicado={this.props.emAdicionarContador}  />
                 <ControleContador rotulo="Subtrair 15" clicado={this.props.emSubstrairContador}  />
+                <hr />
+                <button onClick={this.props.emArmazenarResultado}>Armazenar Resultado</button>
+                <ul>
+                    <li onClick={this.props.emApagarResultado}></li>
+                </ul>
             </div>
         )
     }
@@ -51,7 +56,9 @@ const mapDispatchParaProps = dispatch_param => {
        emIncrementoContador: () => dispatch_param({type: 'INCREMENTO'}),
        emDecrementoContador: () => dispatch_param({type: 'DECREMENTO'}), 
        emAdicionarContador: () => dispatch_param({type: 'ADIC', valor: 10}), 
-       emSubstrairContador: () => dispatch_param({type: 'SUBTR', valor: 15})  
+       emSubstrairContador: () => dispatch_param({type: 'SUBTR', valor: 15}),
+       emArmazenarResultado: () => dispatch_param({type: 'ARMAZENAR_RESULTADO'}),  
+       emApagarResultado: () => dispatch_param({type: 'APAGAR_RESULTADO'})
     }
 }
 
