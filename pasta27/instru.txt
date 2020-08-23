@@ -14,7 +14,7 @@ o botao n faz nada ainda
 
 atualizando estado imutavelmente
 
-
+armazena os resultados
 
 
 

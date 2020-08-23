@@ -39,7 +39,7 @@ class Contador extends Component {
                 <button onClick={this.props.emArmazenarResultado}>Armazenar Resultado</button>
                 <ul>
                     {this.props.resultadosArmazenados.map(cada => (
-                        <li onClick={this.props.emApagarResultado}>{cada}</li>
+                        <li key={cada.id} onClick={this.props.emApagarResultado}>{cada.valor}</li>
                     ))}
                 </ul>
             </div>

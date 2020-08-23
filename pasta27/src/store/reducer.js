@@ -27,7 +27,7 @@ const reducer = (state = stateInicial, acao) => {
         case 'ARMAZENAR_RESULTADO':
             return {
                 ...state,
-                resultados: state.resultados.concat(state.contador)
+                resultados: state.resultados.concat({id: new Date(), valor: state.contador})
             }
     }
     
