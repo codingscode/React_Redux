@@ -48,7 +48,10 @@ const mapStateParaProps = state => {
 
 const mapDispatchParaProps = dispatch_param => {
     return {
-       emIncrementoContador: () => dispatch_param({type: 'INCREMENTO'}) 
+       emIncrementoContador: () => dispatch_param({type: 'INCREMENTO'}),
+       emDecrementoContador: () => dispatch_param({type: 'DECREMENTO'}), 
+       emAdicionarContador: () => dispatch_param({type: 'ADIC', valor: 10}), 
+       emSubstrairContador: () => dispatch_param({type: 'SUBTR', valor: 15})  
     }
 }
 
