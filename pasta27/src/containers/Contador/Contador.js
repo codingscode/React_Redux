@@ -38,7 +38,9 @@ class Contador extends Component {
                 <hr />
                 <button onClick={this.props.emArmazenarResultado}>Armazenar Resultado</button>
                 <ul>
-                    <li onClick={this.props.emApagarResultado}></li>
+                    {this.props.resultadosArmazenados.map(cada => (
+                        <li onClick={this.props.emApagarResultado}>{cada}</li>
+                    ))}
                 </ul>
             </div>
         )
@@ -47,7 +49,8 @@ class Contador extends Component {
 
 const mapStateParaProps = state => {
     return {
-       cont: state.contador
+       cont: state.contador,
+       resultadosArmazenados: state.resultados
     }
 }
 
