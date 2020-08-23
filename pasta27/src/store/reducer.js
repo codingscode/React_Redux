@@ -17,13 +17,13 @@ const reducer = (state = stateInicial, acao) => {
 
     if (acao.type === 'ADIC') {
         return {
-           contador: state.contador + 5
+           contador: state.contador + acao.valor
         }
     }
 
     if (acao.type === 'SUBTR') {
         return {
-           contador: state.contador -5
+           contador: state.contador - acao.valor
         }
     }
     
