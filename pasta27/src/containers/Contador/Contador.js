@@ -39,7 +39,7 @@ class Contador extends Component {
                 <button onClick={this.props.emArmazenarResultado}>Armazenar Resultado</button>
                 <ul>
                     {this.props.resultadosArmazenados.map(cada => (
-                        <li key={cada.id} onClick={this.props.emApagarResultado}>{cada.valor}</li>
+                        <li key={cada.id} onClick={() => this.props.emApagarResultado(cada.id)}>{cada.valor}</li>
                     ))}
                 </ul>
             </div>
@@ -61,7 +61,7 @@ const mapDispatchParaProps = dispatch_param => {
        emAdicionarContador: () => dispatch_param({type: 'ADIC', valor: 10}), 
        emSubstrairContador: () => dispatch_param({type: 'SUBTR', valor: 15}),
        emArmazenarResultado: () => dispatch_param({type: 'ARMAZENAR_RESULTADO'}),  
-       emApagarResultado: () => dispatch_param({type: 'APAGAR_RESULTADO'})
+       emApagarResultado: (id) => dispatch_param({type: 'APAGAR_RESULTADO', result_el_id: id})
     }
 }
 
