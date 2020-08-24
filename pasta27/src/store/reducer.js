@@ -29,6 +29,14 @@ const reducer = (state = stateInicial, acao) => {
                 ...state,
                 resultados: state.resultados.concat({id: new Date(), valor: state.contador})
             }
+        case 'APAGAR_RESULTADO':
+            const id = 2
+            const novoArray = [...state.resultados]
+            novoArray.splice(id, 1)
+            return {
+              ...state,
+              resultados: novoArray
+            }
     }
     
     return state
