@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import ControleContador from '../../components/ControleContador/ControleContador'
 import SaidaContador from '../../components/SaidaControle/SaidaControle'
+import * as acaoTipos from '../../store/actions'
 
 class Contador extends Component {
     
@@ -56,12 +57,12 @@ const mapStateParaProps = state => {
 
 const mapDispatchParaProps = dispatch_param => {
     return {
-       emIncrementoContador: () => dispatch_param({type: 'INCREMENTO'}),
-       emDecrementoContador: () => dispatch_param({type: 'DECREMENTO'}), 
-       emAdicionarContador: () => dispatch_param({type: 'ADIC', valor: 10}), 
-       emSubstrairContador: () => dispatch_param({type: 'SUBTR', valor: 15}),
-       emArmazenarResultado: () => dispatch_param({type: 'ARMAZENAR_RESULTADO'}),  
-       emApagarResultado: (id) => dispatch_param({type: 'APAGAR_RESULTADO', result_el_id: id})
+       emIncrementoContador: () => dispatch_param({type: acaoTipos.INCREMENTO}),
+       emDecrementoContador: () => dispatch_param({type: acaoTipos.DECREMENTO}), 
+       emAdicionarContador: () => dispatch_param({type: acaoTipos.ADIC, valor: 10}), 
+       emSubstrairContador: () => dispatch_param({type: acaoTipos.SUBTR, valor: 15}),
+       emArmazenarResultado: () => dispatch_param({type: acaoTipos.ARMAZENAR_RESULTADO}),  
+       emApagarResultado: (id) => dispatch_param({type: acaoTipos.APAGAR_RESULTADO, result_el_id: id})
     }
 }
 

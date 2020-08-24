@@ -1,3 +1,6 @@
+import * as acaoTipos from './actions'
+
+
 const stateInicial = {
     contador: 0,
     resultados: []
@@ -5,31 +8,31 @@ const stateInicial = {
  
 const reducer = (state = stateInicial, acao) => {
     switch(acao.type) {
-        case 'INCREMENTO':
+        case acaoTipos.INCREMENTO:
             const novoState = Object.assign({}, state)
             novoState.contador = state.contador + 1
             return novoState
-        case 'DECREMENTO':
+        case acaoTipos.DECREMENTO:
             return {
                 ...state,
                 contador: state.contador - 1
             }
-        case 'ADIC':
+        case acaoTipos.ADIC:
             return {
                 ...state,
                 contador: state.contador + acao.valor
             }
-        case 'SUBTR':
+        case acaoTipos.SUBTR:
             return {
                 ...state,
                 contador: state.contador - acao.valor
             }
-        case 'ARMAZENAR_RESULTADO':
+        case acaoTipos.ARMAZENAR_RESULTADO:
             return {
                 ...state,
                 resultados: state.resultados.concat({id: new Date(), valor: state.contador})
             }
-        case 'APAGAR_RESULTADO':
+        case acaoTipos.APAGAR_RESULTADO:
             //const id = 2
             //const novoArray = [...state.resultados]
             //novoArray.splice(id, 1)
