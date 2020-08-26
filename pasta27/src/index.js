@@ -10,8 +10,8 @@ import contadorReducer from './store/reducers/contador'
 import resultadoReducer from './store/reducers/resultado'
 
 const reducerRaiz = combineReducers({
-    contador: contadorReducer,
-    res: resultadoReducer
+    cont: contadorReducer,
+    resultado: resultadoReducer
 })
 
 const store = createStore(reducerRaiz)

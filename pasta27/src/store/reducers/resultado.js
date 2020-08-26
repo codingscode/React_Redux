@@ -11,7 +11,7 @@ const reducer = (state = stateInicial, acao) => {
         case acaoTipos.ARMAZENAR_RESULTADO:
             return {
                 ...state,
-                resultados: state.resultados.concat({id: new Date(), valor: state.contador})
+                resultados: state.resultados.concat({id: new Date(), valor: acao.resultado})
             }
         case acaoTipos.APAGAR_RESULTADO:
             const arrayAtualizada = state.resultados.filter(resultado => resultado.id !== acao.result_el_id)
