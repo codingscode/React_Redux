@@ -50,8 +50,8 @@ class Contador extends Component {
 
 const mapStateParaProps = state => {
     return {
-       cont: state.contador,
-       resultadosArmazenados: state.resultados
+       cont: state.contador.contador,
+       resultadosArmazenados: state.res.resultados
     }
 }
 

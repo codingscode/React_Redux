@@ -18,7 +18,7 @@ armazena os resultados
 
 há erro
 
-
+o valor não atualiza os armazenados
 
 
 
