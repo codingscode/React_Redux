@@ -1,9 +1,9 @@
 import React from 'react'
 
-import classes from './ControleContador.css'
+import './ControleContador.css'
 
 const controleContador = (props) => (
-    <div className={classes.ControleContador} onClick={props.clicado}>
+    <div className={'ControleContador'} onClick={props.clicado}>
         {props.rotulo}
     </div>
 )

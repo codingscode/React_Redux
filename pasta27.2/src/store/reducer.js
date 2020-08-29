@@ -1,28 +1,28 @@
-import * as actionTypes from './actions'
+import * as acaoTipos from './actions'
 
-const initialState = {
-    persons: []
+const stateInicial = {
+    pessoas: []
 }
 
-const reducer = ( state = initialState, action ) => {
-    switch ( action.type ) {
-        case actionTypes.ADD_PERSON:
-            const newPerson = {
+const reducer = ( state = stateInicial, acao ) => {
+    switch ( acao.type ) {
+        case acaoTipos.ADIC_PESSOA:
+            const novaPessoa = {
                 id: Math.random(), // not really unique but good enough here!
-                name: 'Max',
-                age: Math.floor( Math.random() * 40 )
+                nome: 'Max',
+                idade: Math.floor( Math.random() * 40 )
             }
             return {
                 ...state,
-                persons: state.persons.concat( newPerson )
+                pessoas: state.pessoas.concat( novaPessoa )
             }
-        case actionTypes.REMOVE_PERSON:
+        case acaoTipos.REMOVER_PESSOA:
             return {
                 ...state,
-                persons: state.persons.filter(person => person.id !== action.personId)
+                pessoas: state.pessoas.filter(cada => cada.id !== acao.idPessoa)
             }
     }
     return state
 }
 
-export default reducer;
+export default reducer

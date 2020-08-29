@@ -1,9 +1,9 @@
 import React from 'react'
 
-import classes from './SaidaControle.css'
+import './SaidaControle.css'
 
 const saidaContador = (props) => (
-    <div className={classes.SaidaContador}>
+    <div className={'SaidaContador'}>
         Contador Atual: {props.valor}
     </div>
 )

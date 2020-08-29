@@ -1,2 +1,2 @@
-export const ADD_PERSON = 'ADD_PERSON';
-export const REMOVE_PERSON = 'REMOVE_PERSON';
+export const ADIC_PESSOA = 'ADIC_PESSOA'
+export const REMOVER_PESSOA = 'REMOVER_PESSOA'
