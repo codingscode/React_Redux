@@ -9,8 +9,8 @@ const reducer = ( state = stateInicial, acao ) => {
         case acaoTipos.ADIC_PESSOA:
             const novaPessoa = {
                 id: Math.random(), // not really unique but good enough here!
-                nome: 'Max',
-                idade: Math.floor( Math.random() * 40 )
+                nome: acao.dadosPessoa.nome,
+                idade: acao.dadosPessoa.idade
             }
             return {
                 ...state,

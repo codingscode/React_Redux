@@ -28,7 +28,7 @@ const mapStateParaProps = state => {
 
 const mapDispatchParaProps = dispatch => {
     return {
-        emPessoaAdicionada: () => dispatch({type: acaoTipos.ADIC_PESSOA}),
+        emPessoaAdicionada: (nome, idade) => dispatch({type: acaoTipos.ADIC_PESSOA, dadosPessoa: {nome: nome, idade: idade}}),
         emPessoaRemovida: (id) => dispatch({type: acaoTipos.REMOVER_PESSOA, idPessoa: id})
     }
 }
