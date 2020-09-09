@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 
 import './index.css'
@@ -14,7 +14,18 @@ const reducerRaiz = combineReducers({
     resultado: resultadoReducer
 })
 
-const store = createStore(reducerRaiz)
+const logador = store => {
+    return proximo => {
+        return acao => {
+           console.log('[Middleware] Despachando', acao)
+           const resultado = proximo(acao)
+           console.log('[Middleware] proximo state', store.getState())
+           return resultado
+        }
+    }
+}
+
+const store = createStore(reducerRaiz, applyMiddleware(logador))
 
 
 ReactDOM.render(

@@ -21,9 +21,10 @@ class AdicionarPessoa extends Component {
                 <input type="number" placeholder="Idade" onChange={this.tratarIdadeAlterada} value={this.state.idade} />
                 <button onClick={() => this.props.pessoaAdicionada(this.state.nome, this.state.idade)}>Adicionar Pessoa</button>
             </div>
+            
          )
+         
      }
-
 }
 
 export default AdicionarPessoa

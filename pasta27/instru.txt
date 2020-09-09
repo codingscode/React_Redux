@@ -22,5 +22,5 @@ o valor não atualiza os armazenados
 
 armazena agora
 
-
+console aparece quando se clica nos botões
 
