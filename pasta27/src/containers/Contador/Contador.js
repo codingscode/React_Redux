@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { incremento } from '../../store/actions/actions'
+import * as actionCreators from '../../store/actions/actions'
 
 import ControleContador from '../../components/ControleContador/ControleContador'
 import SaidaContador from '../../components/SaidaControle/SaidaControle'
@@ -58,12 +58,12 @@ const mapStateParaProps = state => {
 
 const mapDispatchParaProps = dispatch_param => {
     return {
-       emIncrementoContador: () => dispatch_param(incremento()),
-       emDecrementoContador: () => dispatch_param({type: acaoTipos.DECREMENTO}), 
-       emAdicionarContador: () => dispatch_param({type: acaoTipos.ADIC, valor: 10}), 
-       emSubstrairContador: () => dispatch_param({type: acaoTipos.SUBTR, valor: 15}),
-       emArmazenarResultado: (resultado) => dispatch_param({type: acaoTipos.ARMAZENAR_RESULTADO, resultado: resultado}),  
-       emApagarResultado: (id) => dispatch_param({type: acaoTipos.APAGAR_RESULTADO, result_el_id: id})
+       emIncrementoContador: () => dispatch_param(actionCreators.incremento()),
+       emDecrementoContador: () => dispatch_param(actionCreators.decremento()), 
+       emAdicionarContador: () => dispatch_param(actionCreators.adic(10)), 
+       emSubstrairContador: () => dispatch_param(actionCreators.subtr(15)),
+       emArmazenarResultado: (resultado) => dispatch_param(actionCreators.armazenar_resultado(resultado)),  
+       emApagarResultado: (id) => dispatch_param(actionCreators.apagar_resultado(id))
     }
 }
 

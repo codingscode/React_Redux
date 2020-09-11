@@ -32,5 +32,6 @@ monitorar a extensão redux
 
 desconsiderar erro em acaoTipos
 
+monitorar a extensão redux
 
 
