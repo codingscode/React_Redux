@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { incremento } from '../../store/actions/actions'
 
 import ControleContador from '../../components/ControleContador/ControleContador'
 import SaidaContador from '../../components/SaidaControle/SaidaControle'
-import * as acaoTipos from '../../store/actions'
+
 
 class Contador extends Component {
     
@@ -57,7 +58,7 @@ const mapStateParaProps = state => {
 
 const mapDispatchParaProps = dispatch_param => {
     return {
-       emIncrementoContador: () => dispatch_param({type: acaoTipos.INCREMENTO}),
+       emIncrementoContador: () => dispatch_param(incremento()),
        emDecrementoContador: () => dispatch_param({type: acaoTipos.DECREMENTO}), 
        emAdicionarContador: () => dispatch_param({type: acaoTipos.ADIC, valor: 10}), 
        emSubstrairContador: () => dispatch_param({type: acaoTipos.SUBTR, valor: 15}),

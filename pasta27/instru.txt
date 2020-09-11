@@ -30,6 +30,7 @@ redux devtools ->
 
 monitorar a extensão redux
 
+desconsiderar erro em acaoTipos
 
 
 
