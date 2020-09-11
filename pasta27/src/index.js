@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 
 import './index.css'
@@ -25,7 +25,9 @@ const logador = store => {
     }
 }
 
-const store = createStore(reducerRaiz, applyMiddleware(logador))
+const comporPotenciadores = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+const store = createStore(reducerRaiz, comporPotenciadores(applyMiddleware(logador)))
 
 
 ReactDOM.render(

@@ -24,3 +24,12 @@ armazena agora
 
 console aparece quando se clica nos botões
 
+redux devtools -> 
+    https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=pt-BR
+    https://github.com/zalmoxisus/redux-devtools-extension
+
+monitorar a extensão redux
+
+
+
+
