@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import * as actionCreators from '../../store/actions/actions'
+import * as actionCreators from '../../store/actions/indice'
 
 import ControleContador from '../../components/ControleContador/ControleContador'
 import SaidaContador from '../../components/SaidaControle/SaidaControle'
