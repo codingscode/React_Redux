@@ -21,8 +21,17 @@ export const subtr = (valor) => {
     return { type: SUBTR, valor: valor }
 }
 
+export const salvarResultado = (res) => {
+    return { type: ARMAZENAR_RESULTADO, resultado: res }
+}
+
 export const armazenar_resultado = (resultado) => {
-    return { type: ARMAZENAR_RESULTADO, resultado: resultado }
+    return dispatch => {
+        setTimeout(() => {
+           dispatch(salvarResultado(resultado))
+        }, 2000)
+    }
+    
 }
 
 export const apagar_resultado = (id_res) => {
