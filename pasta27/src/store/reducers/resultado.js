@@ -9,6 +9,7 @@ const stateInicial = {
 const reducer = (state = stateInicial, acao) => {
     switch(acao.type) {
         case acaoTipos.ARMAZENAR_RESULTADO:
+            // Alterar dados
             return {
                 ...state,
                 resultados: state.resultados.concat({id: new Date(), valor: acao.resultado})

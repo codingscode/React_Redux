@@ -2,12 +2,15 @@ import * as acaoTipos from './acaoTipos'
 
 
 export const salvarResultado = (res) => {
+    //const resultadoAtualizado = res * 2
     return { type: acaoTipos.ARMAZENAR_RESULTADO, resultado: res }
 }
 
 export const armazenar_resultado = (resultado) => {
-    return dispatch => {
+    return (dispatch, getState) => {
         setTimeout(() => {
+           const contadorAntigo = getState().cont.contador
+           console.log('*', contadorAntigo)
            dispatch(salvarResultado(resultado))
         }, 2000)
     }

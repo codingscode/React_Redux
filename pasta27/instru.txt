@@ -34,4 +34,5 @@ desconsiderar erro em acaoTipos
 
 monitorar a extensão redux
 
+ver console
 
