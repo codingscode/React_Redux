@@ -1,4 +1,5 @@
 import * as acaoTipos from '../actions/acaoTipos'
+import { atualizarObjeto } from '../utilitario'
 
 
 const stateInicial = {
@@ -10,16 +11,12 @@ const reducer = (state = stateInicial, acao) => {
     switch(acao.type) {
         case acaoTipos.ARMAZENAR_RESULTADO:
             // Alterar dados
-            return {
-                ...state,
-                resultados: state.resultados.concat({id: new Date(), valor: acao.resultado})
-            }
+            return atualizarObjeto(state, { resultados: state.resultados.concat({id: new Date(), valor: acao.resultado}) })
+            
         case acaoTipos.APAGAR_RESULTADO:
             const arrayAtualizada = state.resultados.filter(resultado => resultado.id !== acao.result_el_id)
-            return {
-              ...state,
-              resultados: arrayAtualizada
-            }
+            return atualizarObjeto(state, { resultados: arrayAtualizada })
+            
     }
     
     return state
