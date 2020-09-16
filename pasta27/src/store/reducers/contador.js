@@ -1,5 +1,5 @@
 import * as acaoTipos from '../actions/acaoTipos'
-
+import { atualizarObjeto } from '../utilitario'
 
 const stateInicial = {
     contador: 0
@@ -8,24 +8,14 @@ const stateInicial = {
 const reducer = (state = stateInicial, acao) => {
     switch(acao.type) {
         case acaoTipos.INCREMENTO:
-            const novoState = Object.assign({}, state)
-            novoState.contador = state.contador + 1
-            return novoState
+            return atualizarObjeto(state, { contador: state.contador + 1 })
         case acaoTipos.DECREMENTO:
-            return {
-                ...state,
-                contador: state.contador - 1
-            }
+            return atualizarObjeto(state, { contador: state.contador - 1 })
         case acaoTipos.ADIC:
-            return {
-                ...state,
-                contador: state.contador + acao.valor
-            }
+            return atualizarObjeto(state, { contador: state.contador + acao.valor })
         case acaoTipos.SUBTR:
-            return {
-                ...state,
-                contador: state.contador - acao.valor
-            }
+            return atualizarObjeto(state, { contador: state.contador - acao.valor })
+            
     }
     
     return state

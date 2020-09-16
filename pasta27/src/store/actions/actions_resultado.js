@@ -9,8 +9,8 @@ export const salvarResultado = (res) => {
 export const armazenar_resultado = (resultado) => {
     return (dispatch, getState) => {
         setTimeout(() => {
-           const contadorAntigo = getState().cont.contador
-           console.log('*', contadorAntigo)
+           /* const contadorAntigo = getState().cont.contador
+           console.log('*', contadorAntigo) */
            dispatch(salvarResultado(resultado))
         }, 2000)
     }
