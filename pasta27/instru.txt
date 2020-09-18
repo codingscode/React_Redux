@@ -38,3 +38,7 @@ ver console
 
 testar botoes
 
+https://redux.js.org/
+    https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns
+    
+
