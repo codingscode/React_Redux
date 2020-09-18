@@ -8,8 +8,8 @@ import thunk from 'redux-thunk'
 import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
-import contadorReducer from './store/reducers/contador'
-import resultadoReducer from './store/reducers/resultado'
+import contadorReducer from './store/reducers/reducer_contador'
+import resultadoReducer from './store/reducers/reducer_resultado'
 
 const reducerRaiz = combineReducers({
     cont: contadorReducer,
